@@ -1,7 +1,7 @@
 ---
 title: "Research"
 layout: default
-excerpt: "RT2 Lab -- Research"
+excerpt: "Research at ixLab"
 sitemap: false
 permalink: /research/
 ---
