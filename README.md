@@ -32,7 +32,7 @@ bundle exec jekyll serve
 ### Add a new member
 
 New members are stored as markdown files under
-[_pages/team/_posts](_pages/team/_posts).
+[_pages/people/_posts](_pages/people/_posts).
 
 Each new member `.md` file must look like this:
 
@@ -43,7 +43,7 @@ category: staff
 title: Researcher Name
 image: researcher.png
 role: Lab Director
-permalink: 'team/researcher-name'
+permalink: 'people/researcher-name'
 social:
     twitter: https://twitter.com/
     linkedin: https://www.linkedin.com/

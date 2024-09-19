@@ -1,21 +1,17 @@
-- date: 05/09/19
-  title: "Another great thing"
+- date: 09/03/22
+  title: "Laton Vermette successfully defended his PhD thesis!"
   tags:
-    - some
-    - tags
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
-    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
-    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
+    - Announcements
+    - PhD
+  content: Laton Vermette, a PhD student under the co-supervision of Dr. Parmit Chilana (SFU) 
+    and Dr. Joanna McGrenere (UBC), successfully defended his PhD thesis titled - 
+    An Example-Based Customization Sharing Platform to Support Educators with Using Feature-Rich Classroom Software.
+    Congratulations Dr. Vermette!
 
-- date: 03/09/19
-  title: "Something great"
+- date: 06/09/2021
+  title: "Dr. Parmit Chilana is named Ebco Eppich Research Chair"
   tags:
-    - some
-    - tags
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
-    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
-    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
+    - Announcements
+  content: Congratulations to Dr. Parmit Chilana for being named the inaugural Ebco Eppich Research Chair 
+    for the School of Computing Science! 
+    [Read more](https://www.sfu.ca/sfunews/stories/2021/09/human-computer-interaction-researcher-builds-tools-to-lower-the-.html).
