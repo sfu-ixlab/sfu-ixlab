@@ -70,4 +70,17 @@ layout: default
         <h3>Bio</h3>
         {{ content }}
     </div>
+
+    <!-- Research Interests -->
+    <div class="row">
+        <h3>Research Interests</h3>
+        <ul class="list-unstyled">
+            {% for research in page.research %}
+                <li>{{research}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
 </div>
+
+<p>&nbsp</p>
