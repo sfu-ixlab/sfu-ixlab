@@ -13,8 +13,9 @@ permalink: /people/
 <h2><a id="professor"></a>Professors</h2>
 {% assign members = site.posts | where: 'category', 'professor' | sort: 'order' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+{% assign mod = forloop.length | modulo: 2 %}
+{% cycle 'professorStart': '<div class="card team-member-card">
+    <div class="row mt-3">', '' %}
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/people/{{ member.image }}"
@@ -23,14 +24,18 @@ permalink: /people/
             </a>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-4">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
-    </div>
+{% cycle 'professorEnd': '', '</div>
+    </div>' %}
+{% if forloop.last and mod == 1 %}
 </div>
+    </div>
+{% endif %}
 {% endfor %}
 
 <!-- Lecturers -->
@@ -38,8 +43,9 @@ permalink: /people/
 <h2><a id="lecturer"></a>Lecturers</h2>
 {% assign members = site.posts | where: 'category', 'lecturer' | sort: 'date' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+{% assign mod = forloop.length | modulo: 2 %}
+{% cycle 'lecturerStart': '<div class="card team-member-card">
+    <div class="row mt-3">', '' %}
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/people/{{ member.image }}"
@@ -48,14 +54,18 @@ permalink: /people/
             </a>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-4">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
-    </div>
+{% cycle 'lecturerEnd': '', '</div>
+    </div>' %}
+{% if forloop.last and mod == 1 %}
 </div>
+    </div>
+{% endif %}
 {% endfor %}
 
 <!-- Postdocs -->
@@ -63,8 +73,9 @@ permalink: /people/
 <h2><a id="postdoc"></a>Postdocs</h2>
 {% assign members = site.posts | where: 'category', 'postdoc' | sort: 'date' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+{% assign mod = forloop.length | modulo: 2 %}
+{% cycle 'postdocStart': '<div class="card team-member-card">
+    <div class="row mt-3">', '' %}
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/people/{{ member.image }}"
@@ -73,14 +84,18 @@ permalink: /people/
             </a>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-4">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
-    </div>
+{% cycle 'lecturerEnd': '', '</div>
+    </div>' %}
+{% if forloop.last and mod == 1 %}
 </div>
+    </div>
+{% endif %}
 {% endfor %}
 
 <!-- PhDs -->
@@ -88,8 +103,9 @@ permalink: /people/
 <h2><a id="phd"></a>PhDs</h2>
 {% assign members = site.posts | where: 'category', 'phd' | sort: 'order' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+{% assign mod = forloop.length | modulo: 2 %}
+{% cycle 'phdStart': '<div class="card team-member-card">
+    <div class="row mt-3">', '' %}
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/people/{{ member.image }}"
@@ -98,14 +114,18 @@ permalink: /people/
             </a>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-4">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
-    </div>
+{% cycle 'phdEnd': '', '</div>
+    </div>' %}
+{% if forloop.last and mod == 1 %}
 </div>
+    </div>
+{% endif %}
 {% endfor %}
 
 <!-- Masters -->
@@ -113,8 +133,9 @@ permalink: /people/
 <h2><a id="master"></a>Masters</h2>
 {% assign members = site.posts | where: 'category', 'master' | sort: 'order' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+{% assign mod = forloop.length | modulo: 2 %}
+{% cycle 'masterStart': '<div class="card team-member-card">
+    <div class="row mt-3">', '' %}
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/people/{{ member.image }}"
@@ -129,17 +150,22 @@ permalink: /people/
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
-    </div>
+{% cycle 'masterEnd': '', '</div>
+    </div>' %}
+{% if forloop.last and mod == 1 %}
 </div>
+    </div>
+{% endif %}
 {% endfor %}
 
 <!-- Undergrads -->
 
 <h2><a id="undergrad"></a>Undergrads</h2>
-{% assign members = site.posts | where: 'category', 'master' | sort: 'order' %}
+{% assign members = site.posts | where: 'category', 'undergrad' | sort: 'order' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+{% assign mod = forloop.length | modulo: 2 %}
+{% cycle 'undergradStart': '<div class="card team-member-card">
+    <div class="row mt-3">', '' %}
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/people/{{ member.image }}"
@@ -148,14 +174,18 @@ permalink: /people/
             </a>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-4">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
-    </div>
+{% cycle 'undergradEnd': '', '</div>
+    </div>' %}
+{% if forloop.last and mod == 1 %}
 </div>
+    </div>
+{% endif %}
 {% endfor %}
 
 <!-- Research Assistants -->
@@ -163,8 +193,9 @@ permalink: /people/
 <h2><a id="ra"></a>Research Assistants</h2>
 {% assign members = site.posts | where: 'category', 'ra' | sort: 'order' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+{% assign mod = forloop.length | modulo: 2 %}
+{% cycle 'raStart': '<div class="card team-member-card">
+    <div class="row mt-3">', '' %}
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/people/{{ member.image }}"
@@ -173,14 +204,18 @@ permalink: /people/
             </a>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-4">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
-    </div>
+{% cycle 'raEnd': '', '</div>
+    </div>' %}
+{% if forloop.last and mod == 1 %}
 </div>
+    </div>
+{% endif %}
 {% endfor %}
 
 <!-- Alumni -->
@@ -188,8 +223,9 @@ permalink: /people/
 <h2><a id="alumni"></a>Alumni</h2>
 {% assign members = site.posts | where: 'category', 'alumni' | sort: 'order' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+{% assign mod = forloop.length | modulo: 2 %}
+{% cycle 'alumniStart': '<div class="card team-member-card">
+    <div class="row mt-3">', '' %}
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/people/{{ member.image }}"
@@ -198,14 +234,18 @@ permalink: /people/
             </a>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-4">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
-    </div>
+{% cycle 'alumniiEnd': '', '</div>
+    </div>' %}
+{% if forloop.last and mod == 1 %}
 </div>
+    </div>
+{% endif %}
 {% endfor %}
 
 <!-- Staff
